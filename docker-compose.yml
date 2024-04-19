@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - 8333:8333
+      - 9333:9333
+      - 8888:8888
+    volumes:
+      - ./data:/data
+    environment:
+      ACCESS_KEY_ID: s3accesskey
+      SECRET_KEY: s3secretkey
+      BUCKET_NAME: testbucket
